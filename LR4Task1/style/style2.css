@@ -1,0 +1,11 @@
+.links {
+    background: #F6967D;
+}
+.links a {
+    color: #FFFDEB;
+    display: inline-block;
+    padding: 5px 10px;
+}
+.links a:not(:last-child) {
+    border-right: 1px solid #B62025;
+}

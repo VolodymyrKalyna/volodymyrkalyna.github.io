@@ -1,0 +1,26 @@
+.title {
+    position: relative;
+    text-align: center;
+    margin: 20px 0;
+}
+
+.title::before,
+.title::after {
+    content: "";
+    width: 50%;
+    height: 3px;
+    background-color: black;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+.title::before {
+    left: 0;
+    margin-left: -4%;
+}
+
+.title::after {
+    right: 0;
+    margin-right: -4%;
+}
