@@ -1,0 +1,96 @@
+body {
+    background-color: #422929;
+  }
+  
+.main {
+    width: 35%;
+    padding: 180px;
+    background: #ffffff;
+    color: white;
+    position: absolute;
+    left: 380px;
+    top: 70px;
+}
+
+.photo {
+    position: absolute;
+    left: 80px;
+    top: 70px;
+}
+
+.surface {
+    width: 16%;
+    padding: 20px 50px;
+    position: absolute;
+    background: #340404;
+    color: white;
+    font-weight: bold;
+    left: 76px;
+    top: 240px;
+    font-size: 40px;
+    text-align: center;
+    line-height: 0.75;
+}
+
+.description{
+    font-size: 16px;
+    font-weight: bold;
+}
+
+.yellow {
+    color: yellow;
+}
+
+.gray {
+    color: gray;
+}
+
+.secside {
+    position: absolute;
+    left: 750px;
+    top: 100px;
+    font-size: 18px;
+}
+
+
+.container {
+    position: absolute;
+    width: 18%;
+    margin: 0 auto;
+    overflow: hidden;
+    left: 600px;
+    top: 170px;
+    text-align: center;
+}
+
+.containersec {
+    position: absolute;
+    width: 18%;
+    margin: 0 auto;
+    overflow: hidden;
+    left: 850px;
+    top: 170px;
+    text-align: center;
+}
+
+.offer {
+    width: 80%;
+    float: left;
+    border-bottom: 1px solid rgb(199, 197, 197);
+    position: relative;
+}
+
+.fullmenu {
+    width: 130px;
+    height: 45px;
+    position: absolute;
+    left: 1060px;
+    top: 440px;
+    background: #130505;
+    color: white;
+}
+
+
+
+
+
