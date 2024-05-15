@@ -1,0 +1,33 @@
+
+ .table-container {
+    width: 50%;
+    margin: 0 auto;
+    overflow: hidden;
+}
+
+.main{
+    width: 97%;
+    float: left;
+    background-color: #058135;
+    color: #ffffff;
+    border: 1px solid #000000;
+    text-align: center;
+    font-weight: bold;
+
+}
+.cell {
+    width: 14%;
+    float: left;
+    background-color: #6fc490;
+    color: #000000;
+    border: 1px solid #000000;
+
+}
+
+.last {
+    width: 26%;
+}
+
+.cell:nth-child(even) {
+    background-color: #98f8ad;
+}

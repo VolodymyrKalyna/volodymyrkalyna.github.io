@@ -1,0 +1,22 @@
+table {
+    width: 50%; /* Таблиця займає близько 40% ширини сторінки */
+    margin: 0 auto; /* Центруємо таблицю по горизонталі */
+    border-collapse: collapse; /* Змінюємо вигляд рамок між комірками */
+}
+
+td {
+    border: 1px solid #000000; /* Рамки для комірок */
+    background-color: #98f8ad;
+    text-align: left; /* Вирівнюємо текст по лівому краю */
+}
+
+th {
+    border: 1px solid #000000; /* Рамки для комірок */
+    background-color: #058135;
+    color: white;
+    text-align: center; /* Вирівнюємо текст по лівому краю */
+}
+
+td:nth-child(even) {
+    background-color: #6fc490;
+}
