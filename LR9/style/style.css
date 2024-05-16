@@ -1,0 +1,123 @@
+body {
+    font-family: 'Raleway', sans-serif;
+    margin: 0;
+}
+.container {
+    float: left;
+    display: flex;
+    width: 100%;
+}
+.block {
+    
+    width: 50%;
+    padding: 5px;
+    box-sizing: border-box;
+    text-align: center;
+    color: rgb(0, 113, 123);
+}
+.secblock {
+    position: absolute;
+    left: 850px;
+    top: 20px;
+    font-size: 10px;
+    color: rgb(156, 156, 156);
+}
+.image-container {
+    width: 100%;
+    overflow: hidden; /* Обрізаємо зображення, яке виходить за межі контейнера */
+}
+.image-container img {
+    width: 100%; /* Займає всю доступну ширину контейнера */
+    height: auto; /* Зберігає пропорції зображення */
+    max-height: 350px; /* Максимальна висота зображення */
+    object-fit: cover; /* Масштабує зображення, щоб заповнити контейнер */
+    object-position: top;
+}
+.text-img{
+    position: absolute;
+    left:50%;
+    transform: translateX(-50%);
+    top: 200px;
+    color: white;
+    font-size: 30px;
+}
+.rounded-button {
+    position: absolute;
+    left:50%;
+    transform: translateX(-50%);
+    top: 300px;
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: #cf0072;
+    color: #fff;
+    border: none;
+    border-radius: 20px; /* Радіус закруглення */
+    cursor: pointer;
+    text-decoration: none; /* Забираємо підкреслення */
+}
+
+.text-align{
+    text-align: center;
+    padding: 30px;
+    font-size: 21px;
+}
+
+.text-align2{
+    text-align: center;
+    padding: 70px;
+    font-size: 21px;
+}
+
+.container2 {
+  padding: 20px;
+  display: flex;
+  justify-content: center;
+}
+.block2 {
+    width: 200px;
+    height: 150px;
+    margin: 0 20px; /* Додатковий відступ між блоками */
+    text-align: center; /* Центруємо текст всередині блоку */
+    color: gray;
+    font-size: 12px;
+  }
+  
+  .block2 img {
+    max-width: 100%; /* Зображення не виходить за межі блоку */
+    height: auto; /* Зберігаємо пропорції зображення */
+  }
+  .font28px{
+    padding-top: 10px;
+    font-size: 18px;
+  }
+  .font30px{
+    padding-top: 50px;
+    font-size: 30px;
+  }
+
+  .overflow-ellipsis {
+    width: 400px;
+    white-space: nowrap; /* Забороняємо тексту переноситися на новий рядок */
+    overflow: hidden; /* Приховуємо текст, який не поміщається */
+    text-overflow: ellipsis; /* Замінюємо не вміщаючийся текст на троє крапки */
+  }
+  .tinytext{
+    font-size: 10px;
+    color: gray;
+    white-space: pre-line;
+  }
+  .font10px{
+    font-size: 10px;
+  }
+  .font18px{
+    font-size: 18px;
+  }
+  .full-width-block {
+    margin-top: 20px;
+    width: 100%;
+    background-color: rgb(69, 67, 77);
+    color: rgb(255, 255, 255);
+  }
+  .padding{
+    padding-right: 15px;
+  }
