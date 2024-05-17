@@ -24,13 +24,13 @@ body {
 }
 .image-container {
     width: 100%;
-    overflow: hidden; /* Обрізаємо зображення, яке виходить за межі контейнера */
+    overflow: hidden;
 }
 .image-container img {
-    width: 100%; /* Займає всю доступну ширину контейнера */
-    height: auto; /* Зберігає пропорції зображення */
-    max-height: 350px; /* Максимальна висота зображення */
-    object-fit: cover; /* Масштабує зображення, щоб заповнити контейнер */
+    width: 100%;
+    height: auto;
+    max-height: 350px;
+    object-fit: cover;
     object-position: top;
 }
 .text-img{
@@ -51,9 +51,9 @@ body {
     background-color: #cf0072;
     color: #fff;
     border: none;
-    border-radius: 20px; /* Радіус закруглення */
+    border-radius: 20px;
     cursor: pointer;
-    text-decoration: none; /* Забираємо підкреслення */
+    text-decoration: none;
 }
 
 .text-align{
@@ -76,15 +76,15 @@ body {
 .block2 {
     width: 200px;
     height: 150px;
-    margin: 0 20px; /* Додатковий відступ між блоками */
-    text-align: center; /* Центруємо текст всередині блоку */
+    margin: 0 20px;
+    text-align: center;
     color: gray;
     font-size: 12px;
   }
   
   .block2 img {
-    max-width: 100%; /* Зображення не виходить за межі блоку */
-    height: auto; /* Зберігаємо пропорції зображення */
+    max-width: 100%;
+    height: auto;
   }
   .font28px{
     padding-top: 10px;
@@ -97,9 +97,9 @@ body {
 
   .overflow-ellipsis {
     width: 400px;
-    white-space: nowrap; /* Забороняємо тексту переноситися на новий рядок */
-    overflow: hidden; /* Приховуємо текст, який не поміщається */
-    text-overflow: ellipsis; /* Замінюємо не вміщаючийся текст на троє крапки */
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
   }
   .tinytext{
     font-size: 10px;
