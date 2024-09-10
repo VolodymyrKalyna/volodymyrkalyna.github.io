@@ -1,6 +1,6 @@
 function togglePasswordVisibility(passwordFieldId, toggleElementId, img1, img2) {
     const passwordField = document.getElementById(passwordFieldId);
-    const toggleElement = document.getElementById(toggleElementId);
+    const toggleElement = document.getElementById("toggleElementId");
 
     toggleElement.addEventListener('click', function () {
 
