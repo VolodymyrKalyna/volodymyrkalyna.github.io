@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Create Your Account</title>
+<link rel="stylesheet" href="styles/style2.css">
+</head>
+<body>
+<div class="container">
+    <h2>Create Your Account</h2>
+    <p class="create-now">Already have an account? <a href="index.html">Login</a></p>
+    <form>
+        <label for="First name">First name</label>
+        <input type="text" name="First name" required>
+        <label for="Last Name">Last name</label>
+        <input type="text" name="Last Name" required>
+        <label for="Email">Email</label>
+        <input type="email" name="Email" required>
+
+        <label for="Password">Password</label>
+        <div class="password-container">
+            <input type="password" id="password" name="Password" required>
+            <img src="Screenshot_6.jpg" id="togglePassword" alt="Toggle Password Visibility" class="toggle-icon">
+        </div>
+
+        <label for="Confirm Password">Confirm Password</label>
+        <div class="password-container">
+            <input type="password" id="confirmPassword" name="Confirm Password" required>
+            <img src="Screenshot_6.jpg" id="toggleConfirmPassword" alt="Toggle Confirm Password Visibility" class="toggle-icon">
+        </div>
+        
+        <input type="submit" value="Register">
+        <div class="or-container">
+            <div class="line"></div>
+            <div class="or">Or</div>
+            <div class="line"></div>
+        </div>
+
+        
+        
+    </form>
+
+    <button class="facebook">
+        <img src="facebook-circle-logo-png.png" alt="Facebook" class="login-icon">
+        Continue with Facebook
+    </button>
+    <button class="facebook">
+        <img src="googlenew.png" alt="Google" class="login-icon">
+        Continue with Google
+    </button>
+</div>
+
+<script src="javascript/main.js"></script>
+</body>
+</html>
