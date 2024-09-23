@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Складання двох чисел</title>
+    <script type="text/javascript">
+        function addNumbers() {
+
+            var num1 = parseFloat(document.getElementById("number1").value);
+            var num2 = parseFloat(document.getElementById("number2").value);
+
+
+            if (!isNaN(num1) && !isNaN(num2)) {
+
+                var sum = num1 + num2;
+
+
+                document.getElementById("result").innerHTML = "Результат: " + sum;
+            } else {
+
+                document.getElementById("result").innerHTML = "Будь ласка, введіть два числа.";
+            }
+        }
+    </script>
+</head>
+<body>
+    <h1>Складання двох чисел</h1>
+
+    <label for="number1">Число 1:</label>
+    <input type="text" id="number1"><br><br>
+
+    <label for="number2">Число 2:</label>
+    <input type="text" id="number2"><br><br>
+
+    <button onclick="addNumbers()">Скласти</button><br><br>
+
+    <p id="result"></p>
+
+</body>
+</html>
