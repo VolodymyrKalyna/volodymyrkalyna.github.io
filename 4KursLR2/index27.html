@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Пошук найбільшого числа</title>
+    <script type="text/javascript">
+        function findMax() {
+
+            var num1 = parseFloat(prompt("Введіть перше число:", "0"));
+            var num2 = parseFloat(prompt("Введіть друге число:", "0"));
+
+            if (!isNaN(num1) && !isNaN(num2)) {
+
+                var maxNumber = Math.max(num1, num2);
+
+                document.getElementById("result").innerHTML = "Найбільше число: " + maxNumber;
+            } else {
+
+                document.getElementById("result").innerHTML = "Будь ласка, введіть два коректних числа.";
+            }
+        }
+    </script>
+</head>
+<body>
+    <h1>Пошук найбільшого числа</h1>
+
+    <button onclick="findMax()">Ввести числа</button><br><br>
+
+    <p id="result"></p>
+</body>
+</html>

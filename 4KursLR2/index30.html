@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Список студентів</title>
+</head>
+<body>
+
+    <script>
+
+        let studentCount = parseInt(prompt("Введіть кількість студентів в групі:"));
+
+        if (isNaN(studentCount) || studentCount <= 0) {
+            alert("Будь ласка, введіть коректну кількість студентів.");
+        } else {
+            let students = [];
+
+            for (let i = 0; i < studentCount; i++) {
+                let lastName = prompt(`Введіть прізвище студента №${i + 1}:`);
+                let firstName = prompt(`Введіть ім'я студента №${i + 1}:`);
+                students.push(`${lastName} ${firstName}`);
+            }
+
+            let output = "<h2>Список студентів:</h2><ul>";
+            students.forEach(student => {
+                output += `<li>${student}</li>`;
+            });
+            output += "</ul>";
+
+            document.body.innerHTML = output;
+        }
+    </script>
+
+</body>
+</html>
