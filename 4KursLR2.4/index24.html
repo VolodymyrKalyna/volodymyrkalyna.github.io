@@ -1,0 +1,22 @@
+<HTML>
+    <HEAD>
+    <TITLE>Hello from JavaScript!</TITLE>
+    <SCRIPT LANGUAGE="JavaScript">
+    function askUserInfo() {
+
+        var userName = prompt("Введіть ваше ім'я:", "Ім'я");
+
+        if (userName != null && userName != "") {
+            alert("Привіт, " + userName + "!");
+        } else {
+            alert("Ви не ввели ім'я.");
+        }
+    }
+    </SCRIPT>
+    </HEAD>
+    <BODY BGCOLOR=white>
+    <H1>JavaScript Test</H1>
+    <HR>
+    <A HREF="#" onMouseover="askUserInfo();">Наведіть курсор на мене!</A>
+    </BODY>
+</HTML>
