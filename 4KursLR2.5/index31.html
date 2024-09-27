@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Список студентів</title>
+</head>
+<body>
+
+    <script>
+        let students = [];
+        let lastName, firstName;
+
+        let i=0;
+        while (true) {
+            
+            lastName = prompt(`Введіть прізвище студента №${i + 1} (або натисніть 'Відміна' для завершення):`);
+
+            
+        
+            if (lastName === null) {
+                break;
+            }
+
+            if (!isNaN(lastName) || /\d/.test(lastName))
+            continue;
+            
+
+            
+            firstName = prompt(`Введіть ім'я студента №${i + 1} (або натисніть 'Відміна' для завершення):`);
+
+            
+
+            if (firstName === null) {
+                break;
+            }
+                    
+            if (!isNaN(firstName) || /\d/.test(firstName))
+            continue;
+            
+            students.push(`${lastName} ${firstName}`);
+            i++;
+        }
+
+        if (students.length > 0) {
+            let output = "<h2>Список студентів:</h2><ul>";
+            students.forEach(student => {
+                output += `<li>${student}</li>`;
+            });
+            output += "</ul>";
+
+            document.body.innerHTML = output;
+        } else {
+
+            document.body.innerHTML = "<p>Жодного студента не було введено.</p>";
+        }
+    </script>
+
+</body>
+</html>
