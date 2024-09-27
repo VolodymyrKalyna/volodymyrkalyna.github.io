@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Перевірка натискання кнопок</title>
+    <script type="text/javascript">
+        function showConfirmDialog() {
+
+            var userResponse = confirm("Ви хочете продовжити?");
+
+            if (userResponse) {
+
+                document.getElementById("result").innerHTML = "Ви натиснули 'Ок'.";
+            } else {
+
+                document.getElementById("result").innerHTML = "Ви натиснули 'Відміна'.";
+            }
+        }
+    </script>
+</head>
+<body>
+    <h1>Перевірка натискання кнопок</h1>
+
+    <button onclick="showConfirmDialog()">Показати діалогове вікно</button><br><br>
+
+    <p id="result"></p>
+</body>
+</html>
