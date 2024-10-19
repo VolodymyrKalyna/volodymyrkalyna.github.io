@@ -17,9 +17,11 @@ function generate()
     ttr.value = rtr
     tbr.value = rbr
     tbl.value = rbl
+
     block.style.borderRadius = `${rtl}px ${rtr}px ${rbr}px ${rbl}px`
     code.value = `border-radius: ${rtl}px ${rtr}px ${rbr}px ${rbl}px;`
 
+    
 }
 
 function generateByText()
@@ -58,6 +60,7 @@ function generate2(side)
 
     code2.value = `float: ${side};`
 
+    
 }
 
 const textformated = document.getElementById('textformated')
