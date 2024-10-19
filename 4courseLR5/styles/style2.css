@@ -25,6 +25,10 @@ label {
     margin-top: 5px;
 }
 
+#textarea3{
+    width: 450px;
+    height: 70px;
+}
 
 #tabs .tab {
     display: inline-block;
