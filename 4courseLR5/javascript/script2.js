@@ -17,9 +17,9 @@ function generate()
     ttr.value = rtr
     tbr.value = rbr
     tbl.value = rbl
-
-    block.style.borderRadius = rtl + "px " + rtr + "px " + rbr + "px " + rbl + "px ";
-    code.value = "border-radius: " + rtl + "px " + rtr + "px " + rbr + "px " + rbl + "px;"
+    `${rtl}px ${rtr}px ${rbr}px ${rbl}px;`
+    block.style.borderRadius = `${rtl}px ${rtr}px ${rbr}px ${rbl}px;`
+    code.value = `border-radius: ${rtl}px ${rtr}px ${rbr}px ${rbl}px;`
 
 }
 
@@ -57,7 +57,7 @@ function generate2(side)
 {
     block2.style.float = side;
 
-    code2.value = "float: " + side + ";"
+    code2.value = `float: ${side};`
 
 }
 
@@ -67,7 +67,7 @@ function generate3()
 {
     textformated.style.fontFamily = document.getElementById('font').value
     console.log(document.getElementById('font').value)
-    code3.value = "font-family: " + document.getElementById('font').value + ";"
+    code3.value = `${font-family}: document.getElementById('font').value;`
 }
 
 
