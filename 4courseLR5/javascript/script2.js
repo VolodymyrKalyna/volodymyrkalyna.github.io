@@ -17,7 +17,6 @@ function generate()
     ttr.value = rtr
     tbr.value = rbr
     tbl.value = rbl
-    `${rtl}px ${rtr}px ${rbr}px ${rbl}px;`
     block.style.borderRadius = `${rtl}px ${rtr}px ${rbr}px ${rbl}px;`
     code.value = `border-radius: ${rtl}px ${rtr}px ${rbr}px ${rbl}px;`
 
