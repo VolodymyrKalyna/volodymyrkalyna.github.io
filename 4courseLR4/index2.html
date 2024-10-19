@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Перевірка знань таблиці множення</title>
+    <link rel="stylesheet" href="styles/style2.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Загальний рахунок: <span id="score">0</span>% (<span id="correctCount">0</span> Правильних відповідей з <span id="totalCount">0</span>)</h1>
+        <button onclick="nextTask()">Наступне завдання</button>
+        <div class="taskcontainer">
+            <h2 id="task"></h2>
+            <input type="text" id="answer">
+            <button onclick="checkAnswer()">Перевірити</button>
+        </div>
+        
+        
+        <p id="result"></p>
+    </div>
+    <script src="javascript/script2.js"></script>
+</body>
+</html>

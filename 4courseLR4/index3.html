@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Перевірка знань таблиці множення</title>
+</head>
+<body>
+    <h1>Загальний рахунок: <span id="score">0</span>% <span id="correctAnswers">0</span> правельних відповідей з <span id="totalAnswers">0</span></h1>
+    <button onclick="nextTask()">Наступне завдання</button>
+    <h2><span id="task">0</span></h2>
+
+    <input type="radio" name="options" onclick="checkAnswer(1)">
+    <label for="apple" id="firstoption">0</label><br>
+
+    <input type="radio" name="options" onclick="checkAnswer(2)">
+    <label for="banana" id="secondoption">0</label><br>
+
+    <input type="radio" name="options" onclick="checkAnswer(3)">
+    <label for="orange" id="thirdoption">0</label><br>
+
+    <input type="radio" name="options" onclick="checkAnswer(4)">
+    <label for="grape" id="fourthoption">0</label><br>
+
+    <h2><span id="result"></span></h2>
+    <script src="javascript/script3.js"></script>
+</body>
+</html>

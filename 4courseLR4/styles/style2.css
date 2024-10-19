@@ -1,0 +1,26 @@
+body {
+    font-family: Arial, sans-serif;
+}
+.container {
+    max-width: 900px;
+    
+}
+input[type="text"] {
+    width: 50px;
+    text-align: center;
+}
+
+.taskcontainer{
+    display: flex;
+    align-items: center;
+}
+
+.taskcontainer h2 {
+    margin-right: 10px;
+}
+
+.taskcontainer input {
+    margin-right: 10px;
+    width: 180px;
+    text-align: left;
+}

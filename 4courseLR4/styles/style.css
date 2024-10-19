@@ -1,0 +1,19 @@
+.container {
+    display: flex;
+    flex-direction: column; /* Вертикальне розміщення */
+    max-width: 400px;
+    margin: 20px auto;
+    float: left;
+}
+.input-group {
+    display: flex;
+    align-items: left;
+    margin-bottom: 10px; /* Відстань між групами інпутів */
+}
+label {
+    margin-right: 10px;
+    width: 400px; /* Фіксована ширина для міток */
+}
+input {
+    width: 100px; /* Фіксована ширина для інпутів */
+}

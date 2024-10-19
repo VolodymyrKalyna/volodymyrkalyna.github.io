@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="uk">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles/style.css">
+    <title>Конвертер температури</title>
+</head>
+
+<body>
+
+    <div class="container">
+        <div class="input-group">
+            <label for="fahrenheit">Температура за Фаренгейтом:</label>
+            <input type="text" id="fahrenheit" oninput="fahrenheitToCelsius()">
+        </div>
+        <div class="input-group">
+            <label for="celsius">Температура за Цельсієм:</label>
+            <input type="text" id="celsius" oninput="celsiusToFahrenheit()">
+        </div>
+    </div>
+
+    <script src="javascript/script.js"></script>
+</body>
+
+</html>

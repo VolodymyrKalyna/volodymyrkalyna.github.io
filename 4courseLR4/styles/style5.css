@@ -1,0 +1,46 @@
+body{
+    display: flex;
+    height: 100vh;
+    justify-content: center;
+    align-items: center;
+    font-family: Arial, sans-serif;
+    flex-direction: column;
+}
+
+button{
+    margin: 10px;
+}
+.container{
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    height: 50px;
+    margin: 10px;
+    width: 200px;
+    border: 2px solid black;
+}
+
+span{
+    width: 10px;
+    height: 10px;
+}
+
+.red{
+    background-color: red;
+}
+
+.green{
+    background-color: green;
+}
+
+.textred{
+    color: red;
+}
+
+.textgreen{
+    color: green;
+}
+
+p{
+    font-size: 2em;
+}

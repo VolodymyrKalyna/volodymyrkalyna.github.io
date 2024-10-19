@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles/style2.css">
+    <title>Document</title>
+</head>
+
+<body>
+
+    <div id="tabs">
+        <div class="tab whiteborder">Tab 1</div>
+        <div class="tab">Tab 2</div>
+        <div class="tab">Tab 3</div>
+        <div class="tabContent">
+            <div>Верхній лівий радіус
+                <input type="range" id="rtl" min="0" max="100" value="0" oninput="generate()">
+                <input type="number" id="ttl" value="0" oninput="generateByText()">
+            </div>
+            <div>Верхній правий радіус
+                <input type="range" id="rtr" min="0" max="100" value="0" oninput="generate()">
+                <input type="number" id="ttr" value="0" oninput="generateByText()">
+            </div>
+            <div>Нижній правий радіус
+                <input type="range" id="rbr" min="0" max="100" value="0" oninput="generate()">
+                <input type="number" id="tbr" value="0" oninput="generateByText()">
+            </div>
+            <div>Нижній лівий радіус
+                <input type="range" id="rbl" min="0" max="100" value="0" oninput="generate()">
+                <input type="number" id="tbl" value="0" oninput="generateByText()">
+            </div>
+
+            <div class="container">
+                <div id="block"></div>
+                <label for="code">Code:</label>
+                <textarea id="textarea"></textarea>
+            </div>
+        </div>
+        <div class="tabContent">
+            <div>Виберіть сторону</div>
+            <div>
+                <input type="radio" id="r1" oninput="generate2('left')">
+                <label for="r1">left</label><br>
+                <input type="radio" id="r2" oninput="generate2('right')">
+                <label for="r2">right</label><br>
+                <textarea id="textarea2"></textarea>
+            </div>
+
+                <div id="block2"></div>
+                <div class="content">Lorem ipsum dolor sit amet consectetur adipisicing elit. Repudiandae tempora est
+                    architecto quo quae incidunt, odit molestias quibusdam et, delectus hic accusantium aliquid dolorem
+                    quisquam sit porro, ducimus iure ut.</div>
+        </div>
+        <div class="tabContent">
+            <label for="">Оберіть шрифт</label><br>
+            <select id="font" name="font" onchange="generate3()">
+                <option value="'Courier New', Courier, monospace">'Courier New', Courier, monospace</option>
+                <option value="'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif">'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif</option>
+                <option value="'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif">'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif</option>
+                <option value="'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif">'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif</option>
+                <option value="'Times New Roman', Times, serif">'Times New Roman', Times, serif</option>
+            </select>
+            <textarea id="textarea3"></textarea>
+            <p id="textformated">Lorem ipsum dolor sit amet consectetur adipisicing elit. Modi ratione cum tempore unde eaque ducimus numquam officia natus, repudiandae aspernatur minima incidunt, perspiciatis impedit consequatur. Ducimus praesentium qui dolore incidunt.</p>
+
+        </div>
+    </div>
+
+
+
+
+    <script src="javascript/script2.js"></script>
+</body>
+
+</html>
