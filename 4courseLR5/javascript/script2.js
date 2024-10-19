@@ -66,7 +66,7 @@ function generate3()
 {
     textformated.style.fontFamily = document.getElementById('font').value
     console.log(document.getElementById('font').value)
-    code3.value = `${font-family}: document.getElementById('font').value;`
+    code3.value = `font-family: ${document.getElementById('font').value};`
 }
 
 
