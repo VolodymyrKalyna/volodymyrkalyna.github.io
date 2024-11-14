@@ -1,0 +1,48 @@
+table {
+    width: 100%;
+    border-collapse: collapse;
+}
+table, th, td {
+    border: 1px solid black;
+}
+th, td {
+    padding: 10px;
+    text-align: center;
+}
+.container {
+    width: 80%;
+    margin: 20px auto;
+}
+.total-row {
+    font-weight: bold;
+    background-color: #f0f0f0;
+}
+.delete-btn {
+    color: red;
+    cursor: pointer;
+    text-decoration: underline;
+}
+.change-quantity-btn {
+    cursor: pointer;
+    color: blue;
+    text-decoration: underline;
+}
+.quantity-input {
+    width: 50px;
+    text-align: center;
+}
+.buttons {
+    margin-top: 20px;
+    text-align: center;
+}
+.buttons a {
+    margin: 0 10px;
+    padding: 10px 20px;
+    text-decoration: none;
+    background-color: #007bff;
+    color: white;
+    border-radius: 5px;
+}
+.buttons a:hover {
+    background-color: #0056b3;
+}

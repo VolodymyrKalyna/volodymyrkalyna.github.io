@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Техніка</title>
+    
+</head>
+
+<body>
+<div class="cart-icon" onclick="checkCart()">
+    <div class="cart-count" id="cartCount">0</div>
+</div>
+
+<h1>Техніка</h1>
+
+<div class="container">
+    <div class="block">
+        <p class="category"><a href="#">Планшети</a></p>
+        <div class="line"></div>
+        <a href="#">
+            <img src="img/Screenshot_1.jpg" alt="" width="150px" height="200px">
+        </a>
+        <p class="name"><a href="#">Sumsung s20</a></p>
+        <p class="price">12000 грн</p>
+        <button class="buy-btn" onclick="addToCart('Sumsung s20', 12000)">У корзину</button>
+    </div>
+    <div class="block">
+        <p class="category"><a href="#">Телефони</a></p>
+        <div class="line"></div>
+        <a href="#">
+            <img src="img/Screenshot_2.jpg" alt="" width="150px" height="200px">
+        </a>
+        <p class="name"><a href="#">Sumsung M30</a></p>
+        <p class="price">11000 грн</p>
+        <button class="buy-btn" onclick="addToCart('Sumsung M30', 11000)">У корзину</button>
+    </div>
+    <div class="block">
+        <p class="category"><a href="#">Навушники</a></p>
+        <div class="line"></div>
+        <a href="#">
+            <img src="img/Screenshot_3.jpg" alt="" width="150px" height="200px">
+        </a>
+        <p class="name"><a href="#">JBL Tune 510BT</a></p>
+        <p class="price">2300 грн</p>
+        <button class="buy-btn" onclick="addToCart('JBL Tune 510BT', 2300)">У корзину</button>
+    </div>
+    <div class="block">
+        <p class="category"><a href="#">Ноутбуки</a></p>
+        <div class="line"></div>
+        <a href="#">
+            <img src="img/Screenshot_4.jpg" alt="" width="150px" height="200px">
+        </a>
+        <p class="name"><a href="#">Lenovo V15-IGL</a></p>
+        <p class="price">26000 грн</p>
+        <button class="buy-btn" onclick="addToCart('Lenovo V15-IGL', 26000)">У корзину</button>
+    </div>
+
+    <div class="swipe swipe_left">&lt;</div>
+    <div class="swipe swipe_right">&gt;</div>
+    <div class="newround firstround">Новинка</div>
+    <div class="newround secondround">Хіт продажів</div>
+    <div class="newround thirdround">Хіт продажів</div>
+    
+</div>
+
+<div class="modal" id="emptyCartModal">
+    <div class="modal-content">
+        <p>Корзина пуста</p>
+        <button class="close-btn" onclick="closeModal()">Закрити</button>
+    </div>
+</div>
+
+<div class="modal" id="quantityModal">
+    <div class="modal-content">
+        <p>Вкажіть кількість:</p>
+        <input type="number" id="quantity" min="1" value="1">
+        <button onclick="addItemToCart()">Додати до корзини</button>
+    </div>
+</div>
+
+<div class="modal" id="addedModal">
+    <div class="modal-content">
+        <p>Товар додано</p>
+        <button onclick="goToCart()">Перейти у корзину</button>
+        <button onclick="closeAddedModal()">Повернутись до покупок</button>
+    </div>
+</div>
+
+<script src="script.js">
+    
+</script>
+
+</body>
+</html>
