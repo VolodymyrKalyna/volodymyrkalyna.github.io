@@ -13,13 +13,12 @@ function compareNumbers(num1, num2) {
     });
 }
 
-// Використовуємо then і catch для обробки результату
 compareNumbers(5, 6)
     .then(result => {
-        console.log(result);  // Виведе: Перше число більше
+        console.log(result); 
         document.getElementById('result').textContent = result;
     })
     .catch(error => {
-        console.log(error);  // Виведе: Числа рівні, якщо числа рівні
+        console.log(error);
         document.getElementById('result').textContent = error;
     });
