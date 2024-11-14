@@ -97,10 +97,12 @@ function editQuantity(index) {
         updateQuantity();
     });
     
+    
     function updateQuantity() {
         const newQuantity = parseInt(input.value);
     
         if (isNaN(newQuantity) || newQuantity <= 0) {
+            displayCartItems();
             alert("Введіть коректну кількість!");
             input.value = currentQuantity;
         } else {
@@ -112,5 +114,7 @@ function editQuantity(index) {
         }
     }
 }
+
+
 
 displayCartItems();
