@@ -165,7 +165,7 @@ function renderFilteredTasks(filteredTasks) {
 
         const deleteBtn = document.createElement("button");
         deleteBtn.classList.add("delete-btn");
-        deleteBtn.textContent = "✖";
+        deleteBtn.textContent = "X";
 
         deleteBtn.addEventListener("click", function () {
             deleteTask(index);
