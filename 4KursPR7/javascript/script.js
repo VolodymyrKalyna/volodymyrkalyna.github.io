@@ -73,7 +73,7 @@ function renderTasks() {
 
         const deleteBtn = document.createElement("button");
         deleteBtn.classList.add("delete-btn");
-        deleteBtn.textContent = "✖";
+        deleteBtn.textContent = "&times;";
 
         deleteBtn.addEventListener("click", function () {
             deleteTask(index);
