@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="cartstyle.css">
+    <title>Корзина</title>
+    
+</head>
+<body>
+
+<div class="container">
+    <h1>Корзина</h1>
+    <table>
+        <thead>
+            <tr>
+                <th>№</th>
+                <th>Назва товару</th>
+                <th>Ціна за од.</th>
+                <th>Кількість</th>
+                <th>Сума</th>
+                <th></th>
+            </tr>
+        </thead>
+        <tbody id="cartTableBody">
+        </tbody>
+        <tfoot>
+            <tr class="total-row">
+                <td colspan="4">Разом до сплати</td>
+                <td id="totalAmount">0 грн</td>
+            </tr>
+        </tfoot>
+    </table>
+
+    <div class="buttons">
+        <a href="#">Оплатити</a>
+        <a href="index.html">Повернутись до покупок</a>
+    </div>
+</div>
+
+<div id="deleteModal" class="modal">
+    <div class="modal-content">
+        <p>Ви впевнені, що хочете видалити цей товар?</p>
+        <div class="modal-buttons">
+            <button id="confirmDeleteBtn">Так</button>
+            <button id="cancelDeleteBtn">Ні</button>
+        </div>
+    </div>
+</div>
+
+<script src="cartscript.js">
+
+</script>
+
+</body>
+</html>
