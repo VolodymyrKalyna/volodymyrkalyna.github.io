@@ -222,3 +222,59 @@ img {
     font-size: 14px;
     font-weight: bold;
 }
+
+@media (max-width: 1500px) {
+    .newround {
+        width: 80px;
+        height: 80px;
+        font-size: 14px;
+    }
+    
+    .firstround {
+        left: 160px;
+    }
+    
+    .secondround {
+        left: 660px;
+    }
+    
+    .thirdround {
+        left: 960px;
+    }
+
+    .block {
+        width: 22%;
+    }
+}
+
+@media (max-width: 1500px) {
+    .newround {
+        width: 80px;
+        height: 80px;
+        font-size: 14px;
+    }
+
+    .firstround {
+        left: 110px;
+    }
+
+    .secondround {
+        left: 510px;
+    }
+
+    .thirdround {
+        left: 710px;
+    }
+
+    .block {
+        width: 25%;
+    }
+
+    .container {
+        width: 80%;
+        max-width: 800px;
+    }
+}
+
+
+
