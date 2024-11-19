@@ -1,0 +1,33 @@
+{
+    "title": "Техніка",
+    "products": [
+        {
+            "id": 1,
+            "name": "Sumsung s20",
+            "category": "Планшети",
+            "price": 12000,
+            "image": "img/screenshot_1.jpg"
+        },
+        {
+            "id": 2,
+            "name": "Sumsung M20",
+            "category": "Телефони",
+            "price": 11000,
+            "image": "img/screenshot_2.jpg"
+        },
+        {
+            "id": 3,
+            "name": "JBL Tune 510BT",
+            "category": "Навушники",
+            "price": 2300,
+            "image": "img/screenshot_3.jpg"
+        },
+        {
+            "id": 4,
+            "name": "Lenovo V15-IGL",
+            "category": "Ноутбуки",
+            "price": 26000,
+            "image": "img/screenshot_4.jpg"
+        }
+    ]
+}
