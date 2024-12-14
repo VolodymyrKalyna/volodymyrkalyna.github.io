@@ -1,0 +1,12 @@
+a {
+    display: block;
+    margin: 5px 0;
+    padding: 5px;
+    text-decoration: none;
+    color: black;
+}
+
+.active {
+    background-color: red;
+    color: white;
+}
