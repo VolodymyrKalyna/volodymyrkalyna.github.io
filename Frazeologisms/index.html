@@ -90,10 +90,9 @@
 <body>
 
 <div class="question-container">
-    <div class="score" id="score">
-        Правильних відповідей: 0 / 0 (0%)<br>
-        Очки Yeln: 0
-      </div>
+  <div class="score" id="score">Правильних відповідей: 0 / 0 (0%)</div>
+
+
       <div class="rating" id="rating">Рейтинговий бал: 0</div>
 
   <div class="question" id="question">Завантаження питання...</div>
@@ -436,6 +435,7 @@
   // Скинути лічильники
   correctCount = 0;
   totalCount = 0;
+
   updateScore();
 }
 
@@ -453,8 +453,10 @@
   function updateScore() {
   const scoreElement = document.getElementById("score");
   const ratingElement = document.getElementById("rating");
+  
 
-  scoreElement.textContent = `Правильних відповідей: ${correctCount} / ${totalCount}`;
+
+  scoreElement.textContent = `Правильних відповідей: ${correctCount} / ${totalCount}  ${((correctCount/totalCount) * 100).toFixed(2)}%`;
   ratingElement.textContent = `Рейтинговий бал: ${ratingPoints}`;
 }
 
