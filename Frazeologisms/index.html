@@ -98,6 +98,8 @@
   <div class="question" id="question">Завантаження питання...</div>
   <div class="answers" id="answers"></div>
   <div class="result" id="result"></div>
+  <div class="result" id="result"></div>
+<div id="continueContainer" style="text-align: center; margin-top: 1rem;"></div>
 </div>
 
 <script>
@@ -397,7 +399,8 @@
     const allAnswers = [...wrongAnswers, correctAnswer];
     return allAnswers.sort(() => 0.5 - Math.random());
   }
-
+  const resultContainer = document.getElementById("result");
+  resultContainer.textContent = "";
   function renderQuestion() {
     const currentQuestion = getRandomQuestion();
     const answers = getRandomAnswers(currentQuestion.answer);
@@ -408,7 +411,7 @@
 
     questionElement.textContent = currentQuestion.question;
     answersContainer.innerHTML = "";
-    resultContainer.textContent = "";
+    
 
     answers.forEach(answer => {
       const btn = document.createElement("button");
@@ -424,6 +427,7 @@
     yelnPoints = Math.max(0, Math.round(yelnPoints * 0.8));
           btn.classList.add("wrong");
           resultContainer.textContent = "❌ Неправильно! Правильна відповідь: " + currentQuestion.answer;
+          setTimeout(renderQuestion, 8000);
         }
 
         updateScore();
