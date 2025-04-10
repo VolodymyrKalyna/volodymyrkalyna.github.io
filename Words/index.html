@@ -1,0 +1,378 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+  <meta charset="UTF-8">
+  <title>Вікторина</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      padding: 2rem;
+      background-color: #f0f0f0;
+    }
+    .question-container {
+      background: white;
+      padding: 20px;
+      border-radius: 8px;
+      max-width: 600px;
+      margin: auto;
+      box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+      
+    }
+    .score {
+      font-weight: bold;
+      margin-bottom: 1rem;
+    }
+    .question {
+      font-size: 1.2rem;
+      margin-bottom: 1rem;
+    }
+    .rating {
+  margin-top: 0.5rem;
+  font-weight: bold;
+  color: #444;
+}
+    .answers button {
+      display: block;
+      margin: 0.5rem 0;
+      padding: 0.7rem 1rem;
+      border: none;
+      background-color: #e0e0e0;
+      border-radius: 5px;
+      cursor: pointer;
+      transition: background-color 0.3s;
+    }
+    .answers button:hover {
+      background-color: #d0d0d0;
+    }
+    .correct {
+      background-color: #a6e3a1 !important;
+    }
+    .wrong {
+      background-color: #f2a2a2 !important;
+    }
+    .result {
+      margin-top: 1rem;
+      font-weight: bold;
+    }
+
+    /* 📱 Медіа-запит для мобільних пристроїв */
+@media (max-width: 600px) {
+  body {
+    padding: 1rem;
+  }
+
+  .question-container {
+    padding: 15px;
+    width: 100%;
+    box-sizing: border-box;
+  }
+
+  .question {
+    font-size: 1rem;
+  }
+
+  .answers button {
+    padding: 0.6rem 0.8rem;
+    font-size: 0.9rem;
+  }
+
+  .score, .rating {
+    font-size: 0.95rem;
+    margin-bottom: 0.7rem;
+  }
+
+  .result {
+    font-size: 1rem;
+  }
+}
+  </style>
+</head>
+<body>
+
+<div class="question-container">
+  <div class="score" id="score">Правильних відповідей: 0 / 0 (0%)</div>
+
+
+      <div class="rating" id="rating">Рейтинговий бал: 0</div>
+
+  <div class="question" id="question">Завантаження питання...</div>
+  <div class="answers" id="answers"></div>
+  <div class="result" id="result"></div>
+  <div class="result" id="result"></div>
+<div id="continueContainer" style="text-align: center; margin-top: 1rem;"></div>
+</div>
+
+<script>
+  const questions = [
+  { question: "авангардовий", answer: "передовий" },
+  { question: "авантюра", answer: "пригода" },
+  { question: "авантюрист", answer: "пройдисвіт" },
+  { question: "авдієнція", answer: "зустріч" },
+  { question: "автентичний", answer: "справжній" },
+  { question: "авантюра", answer: "пригода" },
+  { question: "авантюрист", answer: "пройдисвіт" },
+  { question: "автохтонний", answer: "туземний" },
+  { question: "адвентичний", answer: "чужий" },
+  { question: "адекватний", answer: "відповідний" },
+  { question: "адепт", answer: "прихильник" },
+  { question: "адепт", answer: "послідовник" },
+  { question: "азартний", answer: "затятий" },
+  { question: "акомпанувати", answer: "пригравати" },
+  { question: "акомпанувати", answer: "супроводжувати" },
+  { question: "активізувати", answer: "пожвавити" },
+  { question: "активний", answer: "діяльний" },
+  { question: "активний", answer: "чинний" },
+  { question: "акумулювати", answer: "накопичувати" },
+  { question: "акцент", answer: "наголос" },
+  { question: "акція", answer: "захід" },
+  { question: "алогічний", answer: "суперечний логіці" },
+  { question: "альтернатива", answer: "можливість вибору" },
+  { question: "альтруїзм", answer: "безкорисливість" },
+  { question: "амбіція", answer: "самолюбство" },
+  { question: "анархія", answer: "безладдя" },
+  { question: "анестезія", answer: "знеболювання" },
+  { question: "аномалія", answer: "відхилення" },
+  { question: "антагонізм", answer: "суперечність" },
+  { question: "антураж", answer: "середовище" },
+  { question: "анулювати", answer: "скасувати" },
+  { question: "апелювати", answer: "звертатися" },
+
+  { question: "аплікант", answer: "заявник" },
+  { question: "арбітр", answer: "посередник" },
+  { question: "аргумент", answer: "доказ" },
+  { question: "асоціювати", answer: "пов'язувати" },
+  { question: "атлетичний", answer: "дужий" },
+  { question: "базуватись", answer: "грунтуватись" },
+  { question: "безапеляційний", answer: "беззаперечний" },
+  { question: "бізнес", answer: "справа" },
+  { question: "білінгвістичний", answer: "двомовний" },
+  { question: "біографія", answer: "життєпис" },
+  { question: "бюст", answer: "погруддя" },
+  { question: "варіант", answer: "різновид" },
+  { question: "вентилювати", answer: "провітрювати" },
+  { question: "вербальний", answer: "словесний" },
+  { question: "верифікація", answer: "перевірка істинності" },
+  { question: "вертикальний", answer: "прямовисний" },
+  { question: "габарити", answer: "розміри" },
+  { question: "генеалогія", answer: "родовід" },
+  { question: "генеза", answer: "походження" },
+  { question: "генерація", answer: "покоління" },
+  { question: "гетерогенний", answer: "неоднорідний" },
+  { question: "гіпотетичний", answer: "гаданий" },
+  { question: "глянець", answer: "блиск" },
+  { question: "горизонт", answer: "обрій" },
+  { question: "горизонтальний", answer: "поземний" },
+  { question: "грандіозний", answer: "величезний" },
+  { question: "граціозний", answer: "витончений" },
+  { question: "дайджет", answer: "огляд" },
+  { question: "деградація", answer: "занепад" },
+  { question: "дедлайн", answer: "реченець" },
+  { question: "демілітаризація", answer: "роззброєння" },
+  { question: "демонстративний", answer: "наочний" },
+
+  { question: "деструктивний", answer: "руйнівний" },
+  { question: "дидактичний", answer: "повчальний" },
+  { question: "директива", answer: "настанова" },
+  { question: "дисиміляція", answer: "розподібнення" },
+  { question: "дискредитувати", answer: "знеславлювати" },
+  { question: "дислокація", answer: "розміщення" },
+  { question: "дистриб'ютор", answer: "розповсюджувач" },
+  { question: "диференція", answer: "розчленування" },
+  { question: "дифтонг", answer: "двозвук" },
+  { question: "домінанта", answer: "головна ідея" },
+  { question: "евентуальний", answer: "можливий" },
+  { question: "екватор", answer: "рівноденник" },
+  { question: "еквівалент", answer: "відповідник" },
+  { question: "еквівалентний", answer: "рівнозначний" },
+  { question: "екземпляр", answer: "примірник" },
+  { question: "економний", answer: "ощадливий" },
+  { question: "експлуатор", answer: "визискувач" },
+  { question: "експлуатація", answer: "визиск" },
+  { question: "експонувати", answer: "виставляти на показ" },
+  { question: "експромтом", answer: "без підготовки" },
+  { question: "елегійний", answer: "сумний" },
+  { question: "елітарний", answer: "вибраний" },
+  { question: "ембарго", answer: "заборона" },
+  { question: "ембріон", answer: "зародок" },
+  { question: "емфатичний", answer: "почуттєво-виразний" },
+  { question: "епізод", answer: "випадок" },
+  { question: "епізод", answer: "пригода" },
+  { question: "епізод", answer: "подія" },
+  { question: "ерудиція", answer: "обізнаність" },
+  { question: "ескалація", answer: "загострення" },
+  { question: "етичний", answer: "моральний" },
+  { question: "ігнорувати", answer: "зневажати" },
+
+  { question: "ілюзорний", answer: "примарний" },
+  { question: "імідж", answer: "образ" },
+  { question: "імітувати", answer: "наслідувати" },
+  { question: "імітувати", answer: "відтворювати" },
+  { question: "імпозантний", answer: "поважний" },
+  { question: "імпульсивний", answer: "поривчастий" },
+  { question: "індиферентний", answer: "байдужий" },
+  { question: "індульгенція", answer: "помилування" },
+  { question: "індустрія", answer: "промисловість" },
+  { question: "інертний", answer: "байдужий" },
+  { question: "ініціативний", answer: "завзятий" },
+  { question: "інсинуація", answer: "наклеп" },
+  { question: "інстинктивний", answer: "підсвідомий" },
+  { question: "інтеграція", answer: "об'єднання" },
+  { question: "інтервенція", answer: "вторгнення" },
+  { question: "інфальтивний", answer: "дитячий" },
+  { question: "інфікований", answer: "заражений" },
+  { question: "інфільтрація", answer: "просочування" },
+  { question: "іригація", answer: "зрошування" },
+  { question: "ірраціональний", answer: "незрозумілий" },
+  { question: "казуальний", answer: "випадковий" },
+  { question: "капітальний", answer: "грунтовний" },
+  { question: "кваліфікувати", answer: "оцінювати" },
+  { question: "кінетичний", answer: "пов'язаний з рухом" },
+  { question: "колізія", answer: "зіткнення" },
+  { question: "комерсант", answer: "торговець" },
+  { question: "комплекція", answer: "статура" },
+  { question: "комплікація", answer: "ускладнення" },
+  { question: "конвенція", answer: "угода" },
+  { question: "консенсус", answer: "згода" },
+  { question: "консервативний", answer: "старомодний" },
+  { question: "консолідація", answer: "зміцнення" },
+  { question: "конспірація", answer: "таємність" },
+  { question: "констатувати", answer: "встановлювати" },
+  { question: "конфронтація", answer: "протистояння" }
+  
+    
+
+  ];
+
+  let correctCount = 0;
+  let totalCount = 0;
+
+  let yelnPoints = 0;
+
+  let ratingPoints = 0;
+
+  function getRandomQuestion() {
+    const randomIndex = Math.floor(Math.random() * questions.length);
+    return questions[randomIndex];
+  }
+
+  function calculateRating(correctAnswers) {
+    if (correctAnswers >= 160) return 200;
+  if (correctAnswers >= 155) return 193;
+  if (correctAnswers >= 150) return 186;
+  if (correctAnswers >= 145) return 180;
+  if (correctAnswers >= 140) return 176;
+  if (correctAnswers >= 135) return 172;
+  if (correctAnswers >= 130) return 169;
+  if (correctAnswers >= 125) return 165;
+  if (correctAnswers >= 120) return 162;
+  if (correctAnswers >= 115) return 159;
+  if (correctAnswers >= 110) return 157;
+  if (correctAnswers >= 105) return 156;
+  if (correctAnswers >= 100) return 154;
+  if (correctAnswers >= 95) return 152;
+  if (correctAnswers >= 90) return 151;
+  if (correctAnswers >= 85) return 149;
+  if (correctAnswers >= 80) return 147;
+  if (correctAnswers >= 75) return 146;
+  if (correctAnswers >= 70) return 145;
+  if (correctAnswers >= 65) return 144;
+  if (correctAnswers >= 60) return 143;
+  if (correctAnswers >= 55) return 142;
+  if (correctAnswers >= 50) return 141;
+  if (correctAnswers >= 45) return 140;
+  if (correctAnswers >= 40) return 137;
+  if (correctAnswers >= 35) return 134;
+  if (correctAnswers >= 30) return 130;
+  if (correctAnswers >= 25) return 120;
+  if (correctAnswers >= 20) return 110;
+  if (correctAnswers >= 15) return 100;
+  return 0;
+}
+
+  function getRandomAnswers(correctAnswer) {
+    const otherAnswers = questions
+      .map(q => q.answer)
+      .filter(ans => ans !== correctAnswer);
+    otherAnswers.sort(() => 0.5 - Math.random());
+    const wrongAnswers = otherAnswers.slice(0, 4);
+    const allAnswers = [...wrongAnswers, correctAnswer];
+    return allAnswers.sort(() => 0.5 - Math.random());
+  }
+  const resultContainer = document.getElementById("result");
+  resultContainer.textContent = "";
+  function renderQuestion() {
+    const currentQuestion = getRandomQuestion();
+    const answers = getRandomAnswers(currentQuestion.answer);
+
+    const questionElement = document.getElementById("question");
+    const answersContainer = document.getElementById("answers");
+    const resultContainer = document.getElementById("result");
+
+    questionElement.textContent = currentQuestion.question;
+    answersContainer.innerHTML = "";
+    
+
+    answers.forEach(answer => {
+      const btn = document.createElement("button");
+      btn.textContent = answer;
+      btn.onclick = () => {
+        totalCount++;
+        if (answer === currentQuestion.answer) {
+  btn.classList.add("correct");
+  resultContainer.textContent = "✅ Правильно!";
+  correctCount++;
+  yelnPoints += 10;
+} else {
+    yelnPoints = Math.max(0, Math.round(yelnPoints * 0.8));
+          btn.classList.add("wrong");
+          resultContainer.textContent = "❌ Неправильно! Правильна відповідь: " + currentQuestion.answer;
+          setTimeout(renderQuestion, 8000);
+        }
+
+        updateScore();
+
+        if (totalCount === 160) {
+  // Додати до рейтингу
+  ratingPoints = calculateRating(correctCount);
+
+  // Скинути лічильники
+  correctCount = 0;
+  totalCount = 0;
+
+  updateScore();
+}
+
+
+        // Заборонити вибір після відповіді
+        Array.from(answersContainer.children).forEach(b => b.disabled = true);
+
+        // Наступне питання через 2 секунди
+        setTimeout(renderQuestion, 2000);
+      };
+      answersContainer.appendChild(btn);
+    });
+  }
+
+  function updateScore() {
+  const scoreElement = document.getElementById("score");
+  const ratingElement = document.getElementById("rating");
+  
+
+
+  scoreElement.textContent = `Правильних відповідей: ${correctCount} / ${totalCount}  ${((correctCount/totalCount) * 100).toFixed(2)}%`;
+  ratingElement.textContent = `Рейтинговий бал: ${ratingPoints}`;
+}
+
+setInterval(() => {
+  if (yelnPoints > 0) {
+    yelnPoints=yelnPoints-0.1;
+    updateScore();
+  }
+}, 1000);
+
+
+  renderQuestion();
+</script>
+
+</body>
+</html>
