@@ -383,8 +383,8 @@
 } else {
     yelnPoints = Math.max(0, Math.round(yelnPoints * 0.8));
           btn.classList.add("wrong");
-          resultContainer.textContent = "❌ Неправильно! Правильна відповідь: " + currentQuestion.answer;
-          renderQuestion();
+          resultContainer.textContent = "❌ Неправильно! Правильна відповідь: " + currentQuestion.answer + currentQuestion.question;
+          setTimeout(renderQuestion, 8000);
         }
 
         updateScore();
@@ -405,7 +405,7 @@
         Array.from(answersContainer.children).forEach(b => b.disabled = true);
 
         // Наступне питання через 2 секунди
-        renderQuestion();
+        setTimeout(renderQuestion, 1200);
       };
       answersContainer.appendChild(btn);
     });
