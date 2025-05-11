@@ -1,0 +1,38 @@
+[
+  {
+    "title": "Бізнес-віза",
+    "description": "Допоможемо швидко отримати дозвіл для ведення бізнесу за кордоном.",
+    "image": "img/card1.png",
+    "icon": "fa-briefcase"
+  },
+  {
+    "title": "Робоча віза",
+    "description": "Отримайте можливість легально працювати у вибраній країні.",
+    "image": "img/card2.png",
+    "icon": "fa-gear"
+  },
+  {
+    "title": "Студентська віза",
+    "description": "Відкрийте двері до якісної освіти за кордоном.",
+    "image": "img/card3.png",
+    "icon": "fa-graduation-cap"
+  },
+  {
+    "title": "Туристична віза",
+    "description": "Подорожуйте світом без зайвого клопоту з документами.",
+    "image": "img/card4.png",
+    "icon": "fa-earth-americas"
+  },
+  {
+    "title": "Гід віза",
+    "description": "Отримайте професійну консультацію щодо оформлення віз для вашої подорожі.",
+    "image": "img/card4.png",
+    "icon": "fa-earth-americas"
+  },
+  {
+    "title": "Дешева віза",
+    "description": "Оформлення доступної візи для вашої подорожі швидко та без зайвих витрат.",
+    "image": "img/card3.png",
+    "icon": "fa-signs-post"
+  }
+]
