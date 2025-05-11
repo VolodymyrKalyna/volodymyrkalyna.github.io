@@ -1,0 +1,44 @@
+[
+  {
+    "title": "Бангладеш",
+    "description": "Ласкаво просимо до Бангладеш — найкращі послуги з отримання візи.",
+    "price": 12000.00,
+    "image": "img/visa-offer-img1.png",
+    "icon": "img/visa-offer-small-img1.png"
+  },
+  {
+    "title": "Південна Корея",
+    "description": "Отримайте найкращі можливості для подорожі до Південної Кореї.",
+    "price": 15700.00,
+    "image": "img/visa-offer-img2.png",
+    "icon": "img/visa-offer-small-img2.png"
+  },
+  {
+    "title": "Туреччина",
+    "description": "Відкрийте для себе чудові можливості для подорожі до Туреччини.",
+    "price": 8200.00,
+    "image": "img/visa-offer-img3.png",
+    "icon": "img/visa-offer-small-img3.png"
+  },
+  {
+    "title": "Південна Африка",
+    "description": "Подорожуйте до Південної Африки з легкістю та комфортом.",
+    "price": 12000.00,
+    "image": "img/visa-offer-img4.png",
+    "icon": "img/visa-offer-small-img4.png"
+  },
+  {
+    "title": "Німеччина",
+    "description": "Підготуйтеся до незабутньої подорожі до Німеччини.",
+    "price": 14500.00,
+    "image": "img/visa-offer-img5.png",
+    "icon": "img/visa-offer-small-img5.png"
+  },
+  {
+    "title": "Японія",
+    "description": "Досліджуйте Японію з найкращими умовами для подорожі.",
+    "price": 12800.00,
+    "image": "img/visa-offer-img6.png",
+    "icon": "img/visa-offer-small-img6.png"
+  }
+]
